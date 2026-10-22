@@ -3,6 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN801KT4MQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KN801KT4MQ');
+</script>
 <title>採用情報（中途・新卒）| 日特工業株式会社</title>
 <meta name="description" content="日特工業株式会社の採用情報。長野県大町市を拠点に空調・給排水などのライフラインを支える地域インフラ企業。中途採用（未経験・異業種歓迎）・新卒採用ともに募集中。月給25〜35万円・賞与年3回・転勤なし。">
 <style>
@@ -954,6 +962,8 @@
     text-decoration: none;
     box-shadow: 0 6px 28px rgba(26,181,197,.35);
     transition: transform var(--t), box-shadow var(--t);
+    border: none;
+    cursor: pointer;
   }
   .btn-cta:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(26,181,197,.45); color: var(--white); }
   .btn-cta-sub {
@@ -973,6 +983,15 @@
   }
   .btn-cta-sub:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
   .cta-note { font-size: 12px; color: rgba(90,90,106,.5); margin-top: 24px; }
+  .apply-form { width: 100%; max-width: 520px; margin: 0 auto 32px; text-align: left; }
+  .af-row { margin-bottom: 20px; }
+  .af-label { display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .af-req { color: var(--gold); }
+  .af-input { width: 100%; padding: 12px 14px; border: 1.5px solid var(--gray-lt); border-radius: 8px; font-size: 14px; font-family: inherit; color: var(--ink); background: var(--white); transition: border-color var(--t), box-shadow var(--t); }
+  .af-input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(26,181,197,.15); }
+  .af-radio-group { display: flex; gap: 24px; flex-wrap: wrap; }
+  .af-radio { display: flex; align-items: center; gap: 8px; font-size: 14px; cursor: pointer; }
+  .af-radio input[type="radio"] { accent-color: var(--gold); width: 16px; height: 16px; }
 
   /* ==============================
      OVERVIEW (簡易)
@@ -1783,12 +1802,36 @@
       </div>
       <h2 class="stitle">あなたのチャレンジを、<br>待っています。</h2>
       <p>未経験でも、異業種からでも大丈夫です。<br>「地元で、技術を持って、長く働きたい」という想いがあれば、ぜひご応募ください。<br>中途・新卒ともに下記フォームよりお申し込みいただけます。</p>
-      <div class="cta-btns">
-        <a href="https://nittokunet.com/contact" target="_blank" class="btn-cta">
-          <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
-          応募フォームへ（中途・新卒共通）
-        </a>
-      </div>
+      <form action="https://formspree.io/f/xljgqkey" method="POST" class="apply-form">
+        <div class="af-row">
+          <label class="af-label">お名前 <span class="af-req">*</span></label>
+          <input type="text" name="name" required placeholder="山田 太郎" class="af-input">
+        </div>
+        <div class="af-row">
+          <label class="af-label">応募区分 <span class="af-req">*</span></label>
+          <div class="af-radio-group">
+            <label class="af-radio"><input type="radio" name="応募区分" value="中途採用" required>中途採用</label>
+            <label class="af-radio"><input type="radio" name="応募区分" value="新卒採用">新卒採用</label>
+          </div>
+        </div>
+        <div class="af-row">
+          <label class="af-label">連絡希望方法 <span class="af-req">*</span></label>
+          <div class="af-radio-group">
+            <label class="af-radio"><input type="radio" name="連絡希望方法" value="メール" required>メール</label>
+            <label class="af-radio"><input type="radio" name="連絡希望方法" value="電話">電話</label>
+          </div>
+        </div>
+        <div class="af-row">
+          <label class="af-label">メールアドレスまたは電話番号 <span class="af-req">*</span></label>
+          <input type="text" name="連絡先" required placeholder="例：sample@gmail.com　または　090-0000-0000" class="af-input">
+        </div>
+        <div class="cta-btns">
+          <button type="submit" class="btn-cta">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            この内容で応募する
+          </button>
+        </div>
+      </form>
       <div class="cta-note">まずは話を聞くだけでも構いません。お気軽にご連絡ください。<br>採用担当：福島・檜山　TEL: 0261-22-5266　MAIL: saiyou@nittokunet.com</div>
     </div>
   </div>
